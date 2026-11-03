@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026 — Год белорусской женщины</title>
+  <meta name="description" content="Беларусь и её женщины: Ефросинья Полоцкая, воительницы и защитницы, поэтессы, учёные и спортсменки." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Ruslan+Display&family=Alegreya:ital,wght@0,400;0,700;1,400&family=Alegreya+SC:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Unbounded:wght@300;500;700&family=JetBrains+Mono:wght@400;600&family=Manrope:wght@400;600&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M14 2h4v6h6v3h-6v4h8v3h-8v12h-4V18H6v-3h8v-4H8V8h6z' fill='%23c9a14a'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <canvas id="embers" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a href="#top" class="brand">
+      <img src="/img/flag.svg" alt="" width="30" height="15" />
+      Беларусь
+    </a>
+    <nav class="menu">
+      <a href="#euphrosyne">Ефросинья</a>
+      <a href="#rulers">Защитницы</a>
+      <a href="#culture">Искусство</a>
+      <a href="#science">Наука</a>
+      <a href="#sport">Спорт</a>
+      <a href="#bond">Связь</a>
+    </nav>
+    <a href="#book" class="to-book" id="to-book" aria-label="Перейти к книге «Связь поколений»">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5C4 3.7 4.7 3 5.5 3H11v16H5.5c-.8 0-1.5.4-1.5 1zM20 4.5c0-.8-.7-1.5-1.5-1.5H13v16h5.5c.8 0 1.5.4 1.5 1zM4 20c0 .6.7 1 1.5 1H11M20 20c0 .6-.7 1-1.5 1H13" /></svg>
+      <span>К книге</span>
+    </a>
+  </header>
+
+  <main id="top">
+    <!-- HERO: 2026 — Год белорусской женщины -->
+    <section class="hero">
+      <svg class="rushnik" aria-hidden="true">
+        <defs>
+          <pattern id="uzor" width="48" height="48" patternUnits="userSpaceOnUse">
+            <path d="M24 3l21 21-21 21L3 24z M24 11l13 13-13 13-13-13z M24 19l5 5-5 5-5-5z M0 0h6v6H0z M42 0h6v6h-6z M0 42h6v6H0z M42 42h6v6h-6z M21 0h6v3h-6z M21 45h6v3h-6z M0 21h3v6H0z M45 21h3v6h-3z" fill-rule="evenodd" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#uzor)" />
+      </svg>
+      <div class="hero-text">
+        <p class="eyebrow reveal-load" style="--d:.2s">Беларусь · 2026</p>
+        <h1 class="reveal-load" style="--d:.4s">Год<br /><em>белорусской</em><br />женщины</h1>
+        <p class="lead reveal-load" style="--d:.7s">
+          Святые и княгини, воительницы и подпольщицы, поэтессы и актрисы, учёные, космонавт и олимпийские чемпионки. Тысяча лет истории —
+          и в каждом веке есть женщина, без которой Беларусь была бы другой.
+        </p>
+        <div class="hero-actions reveal-load" style="--d:1s">
+          <a href="#euphrosyne" class="btn">Начать путешествие</a>
+          <a href="#sport" class="btn ghost">К современности</a>
+        </div>
+      </div>
+      <div class="hero-year reveal-load" style="--d:.9s" aria-hidden="true">2026</div>
+      <nav class="doors reveal-load" style="--d:1.3s" aria-label="Главы">
+        <a href="#euphrosyne" class="door" data-theme="church"><small>I</small>Небесная покровительница Беларуси</a>
+        <a href="#rulers" class="door" data-theme="chronicle"><small>II</small>Воительницы и защитницы</a>
+        <a href="#culture" class="door" data-theme="stage"><small>III</small>Искусство</a>
+        <a href="#science" class="door" data-theme="cosmos"><small>IV</small>Наука и космос</a>
+        <a href="#sport" class="door" data-theme="arena"><small>V</small>Спорт</a>
+      </nav>
+    </section>
+
+    <!-- CHAPTER I: EUPHROSYNE (church style) -->
+    <section id="euphrosyne" class="chapter theme-church">
+      <header class="chapter-head reveal">
+        <span class="chapter-num">Глава I</span>
+        <h2>Преподобная Ефросинья</h2>
+        <div class="ornament" aria-hidden="true"></div>
+      </header>
+      <div id="saint-chrono"></div>
+      <div id="saint-exhibits"></div>
+
+      <div class="finale reveal">
+        <blockquote>
+          «Да не будет он выносим из монастыря никогда… И кто ослушается и вынесет его — да примет с ним суд в день Страшного Суда».
+        </blockquote>
+        <cite>— Надпись на кресте Ефросиньи Полоцкой, 1161 год</cite>
+      </div>
+    </section>
+
+    <!-- CHAPTERS II–V: each rendered from SITE.chapters in its own style -->
+    <div id="chapters"></div>
+
+    <!-- EPILOGUE: corkboard with red threads + a book on the desk -->
+    <section id="bond" class="chapter theme-bond">
+      <header class="chapter-head reveal">
+        <span class="chapter-num">Эпилог</span>
+        <h2 id="bond-title"></h2>
+        <div class="ornament" aria-hidden="true"></div>
+        <p class="chapter-intro" id="bond-intro"></p>
+      </header>
+      <div class="board reveal" id="board">
+        <svg class="threads" id="threads" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="knot"><span class="tack" aria-hidden="true"></span><b>Связь поколений</b><small>X — XXI век</small></div>
+        <ul class="snaps" id="snaps" aria-label="Героини проекта"></ul>
+      </div>
+      <div class="desk">
+        <button type="button" class="book" id="book" aria-haspopup="dialog" aria-controls="tome">
+          <span class="book-cover"><i aria-hidden="true"></i><b>Связь<br />поколений</b><small>открыть книгу</small></span>
+          <span class="book-pages" aria-hidden="true"></span>
+        </button>
+        <span class="desk-pen" aria-hidden="true"></span>
+      </div>
+    </section>
+  </main>
+
+  <!-- VOYAGE: time travel to the chosen year -->
+  <div class="voyage" id="voyage" role="dialog" aria-modal="true" aria-labelledby="voyage-title" hidden>
+    <div class="v-tunnel" aria-hidden="true"></div>
+    <div class="v-rays" aria-hidden="true"></div>
+    <div class="v-counter" aria-hidden="true"><span class="v-num">2026</span><small>год</small></div>
+    <div class="v-flash" aria-hidden="true"></div>
+    <article class="v-card">
+      <div class="v-visual" aria-hidden="true"></div>
+      <div class="v-body">
+        <p class="kicker"></p>
+        <h3 id="voyage-title"></h3>
+        <p class="subtitle"></p>
+        <dl class="facts"></dl>
+        <div class="story"></div>
+        <nav class="v-nav" aria-label="Другие годы">
+          <button type="button" data-step="-1"></button>
+          <button type="button" data-step="1"></button>
+        </nav>
+      </div>
+    </article>
+    <button type="button" class="v-close">Вернуться в 2026 <span aria-hidden="true">✕</span></button>
+  </div>
+
+  <!-- TOME: the book from the desk, opened -->
+  <div class="tome" id="tome" role="dialog" aria-modal="true" aria-labelledby="tome-title" hidden>
+    <h3 class="sr-only" id="tome-title">Книга «Связь поколений»</h3>
+    <div class="tome-book">
+      <div class="leaf leaf-l"><div class="page"></div></div>
+      <div class="leaf leaf-r"><div class="page"></div></div>
+      <div class="turn" aria-hidden="true"><div class="face front"><div class="page"></div></div><div class="face back"><div class="page"></div></div></div>
+      <div class="cover" aria-hidden="true">
+        <div class="face front"><i></i><b>Связь<br />поколений</b><small>Беларусь · X — XXI век</small></div>
+        <div class="face back"><span>✦</span></div>
+      </div>
+    </div>
+    <nav class="tome-nav" aria-label="Страницы книги">
+      <button type="button" data-turn="-1" aria-label="Предыдущая страница">←</button>
+      <span class="tome-folio" aria-live="polite"></span>
+      <button type="button" data-turn="1" aria-label="Следующая страница">→</button>
+    </nav>
+    <button type="button" class="tome-close">Закрыть книгу <span aria-hidden="true">✕</span></button>
+  </div>
+
+  <footer class="footer">
+    <p>Беларусь · конкурсный проект · 2026</p>
+    <p class="muted">Живописные иллюстрации созданы специально для проекта. Флаг — из Wikimedia Commons. Портреты героинь — из Википедии, Wikimedia Commons и открытых источников. Источник сведений указан в конце рассказа о каждой героине.</p>
+  </footer>
+
+  <script src="/data.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>
